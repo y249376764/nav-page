@@ -40,6 +40,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
   <div class="tab" onclick="sw(1)">📺 影视</div>
   <div class="tab" onclick="sw(2)">🎧 听书</div>
   <div class="tab" onclick="sw(3)">📡 直播</div>
+  <div class="tab" onclick="sw(4)">📚 阅读</div>
 </div>
 
 <!-- 音乐 -->
@@ -184,6 +185,47 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
     · 影视/直播：TVBox/影视仓 → 设置 → 配置地址 → 粘贴<br>
     · 公开接口时效性短，失效了就换下一个；「俊佬 top98」为实测可用<br>
     · 如需更新更多资源，可搜索"TVBox 接口 最新" / "洛雪音源 直通车"
+  </div>
+</div>
+
+
+<!-- 阅读 -->
+<div class="panel" id="p4">
+  <div class="sec">
+    <div class="sec-t">📚 阅读书源（Legado / 阅读App）</div>
+    <div class="sec-d">复制链接 → 阅读App「我的 → 书源管理 → 导入」· 或点「一键导入」自动唤起（部分需长按复制协议）</div>
+    <div class="item">
+      <span class="it-name">📖 全量书源（aoaostar 合集）</span>
+      <button class="copy-btn" onclick="copyText(this,'https://legado.aoaostar.com/sources/b778fe6b.json')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">🔥 XIU2 精品书源</span>
+      <button class="copy-btn" onclick="copyText(this,'https://legado.aoaostar.com/sources/71e56d4f.json')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">🔥 破冰书源</span>
+      <button class="copy-btn" onclick="copyText(this,'https://legado.aoaostar.com/sources/4dc410d1.json')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">📚 shidahuilang 书源</span>
+      <button class="copy-btn" onclick="copyText(this,'https://legado.aoaostar.com/sources/e29e19ee.json')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">🔊 TTS 听书源（在线朗读）</span>
+      <button class="copy-btn" onclick="copyText(this,'https://legado.aoaostar.com/sources/856adf0e.json')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">🧹 替换净化规则（去广告）</span>
+      <button class="copy-btn" onclick="copyText(this,'https://legado.aoaostar.com/sources/3f067eb2.json')">复制</button>
+    </div>
+  </div>
+  <div class="note">
+    💡 <b>阅读App 导入方法</b><br>
+    · 阅读App（Legado）→「我的」→「书源管理」→「导入」→「网络导入」→ 粘贴复制的链接<br>
+    · 也支持协议一键导入：legado://import/bookSource?src=链接（长按可复制）<br>
+    · TTS 听书源 → 书源管理 → 朗读引擎 → 导入<br>
+    · 替换净化 → 「我的」→「替换净化」→ 导入<br>
+    · 阅读App 官方下载：https://github.com/gedoor/legado/releases
   </div>
 </div>
 
