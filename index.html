@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>资源导航</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#0f1115;color:#e8e8e8;min-height:100vh;padding:20px 14px 60px}
+.hd{text-align:center;margin-bottom:18px}
+.hd h1{font-size:24px;font-weight:700;color:#fff}
+.hd p{color:#888;font-size:13px;margin-top:6px}
+.tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.tab{padding:8px 18px;border-radius:20px;background:#232836;color:#cbd2e0;border:1px solid #2e3548;cursor:pointer;font-size:14px;font-weight:500;transition:all .15s;user-select:none}
+.tab:hover{background:#2e3548;color:#fff}
+.tab.active{background:#3b82f6;border-color:#3b82f6;color:#fff}
+.panel{display:none;max-width:860px;margin:0 auto}
+.panel.active{display:block;animation:fade .25s}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.sec{background:#1a1e27;border-radius:14px;padding:18px 20px;margin-bottom:16px}
+.sec-t{font-size:16px;font-weight:600;color:#fff;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.sec-d{color:#77809a;font-size:12px;margin-bottom:14px}
+.item{display:flex;align-items:center;gap:10px;background:#232836;border-radius:8px;padding:9px 12px;font-size:13px;margin-bottom:8px}
+.it-name{flex:1;color:#dde3ee;word-break:break-all}
+.it-url{color:#6b7280;font-size:11px;flex:1;word-break:break-all;display:none}
+.copy-btn{background:#3b82f6;color:#fff;border:none;border-radius:6px;padding:5px 14px;font-size:12px;cursor:pointer;white-space:nowrap;transition:background .15s;flex-shrink:0}
+.copy-btn:hover{background:#2563eb}
+.visit-btn{background:#22c55e;color:#fff;border:none;border-radius:6px;padding:5px 14px;font-size:12px;cursor:pointer;text-decoration:none;display:inline-block;flex-shrink:0;text-align:center}
+.visit-btn:hover{background:#16a34a}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:#232836;border-radius:10px;padding:14px 16px;display:block;text-decoration:none;color:inherit;transition:transform .15s,background .15s}
+.card:hover{transform:translateY(-2px);background:#2a3040}
+.card .n{font-weight:600;font-size:14px;color:#fff}
+.card .m{color:#8a93a6;font-size:12px;margin-top:5px;line-height:1.6;word-break:break-all}
+.note{background:#1f2a1f;border:1px solid #3c5c3c;border-radius:10px;padding:12px 14px;color:#9fd09f;font-size:12px;line-height:1.8}
+.ft{text-align:center;color:#555;font-size:12px;margin-top:26px}
+.disclaimer{max-width:860px;margin:0 auto 16px;text-align:center;background:#2a2420;border:1px solid #5c4a38;color:#d8b98a;border-radius:10px;padding:10px 14px;font-size:12px;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="hd"><h1>🗂️ 资源导航</h1><p>全网公开资源 · 分类速查</p></div>
+<div class="disclaimer">⚠️ 本站资源均为网络收集，仅供学习交流，版权归原作者所有，如有侵犯请联系删除</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="sw(0)">🎵 音乐</div>
+  <div class="tab" onclick="sw(1)">📺 影视</div>
+  <div class="tab" onclick="sw(2)">🎧 听书</div>
+  <div class="tab" onclick="sw(3)">📡 直播</div>
+</div>
+
+<!-- 音乐 -->
+<div class="panel active" id="p0">
+  <div class="sec">
+    <div class="sec-t">🎵 洛雪音乐音源</div>
+    <div class="sec-d">官方直通车选源 · 精选源一键复制（洛雪App → 设置 → 自定义源管理 → 在线导入）</div>
+    <div class="item">
+      <span class="it-name">洛雪音源直通车（选源导入）</span>
+      <a class="visit-btn" href="https://77f77.48364836.xyz/lx/" target="_blank">打开</a>
+      <button class="copy-btn" onclick="copyText(this,'https://77f77.48364836.xyz/lx/')">复制</button>
+    </div>
+            <div class="item">
+              <span class="it-name">墨澜音乐源v2.3.4.js</span>
+              <button class="copy-btn" onclick="copyText(this,'https://gh-proxy.com/https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261003/墨澜音乐源v2.3.4.js')">复制</button>
+            </div>
+            <div class="item">
+              <span class="it-name">lx-玉宁熙1.2.5.js</span>
+              <button class="copy-btn" onclick="copyText(this,'https://gh-proxy.com/https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261003/lx-玉宁熙1.2.5.js')">复制</button>
+            </div>
+            <div class="item">
+              <span class="it-name">星海音乐源V3.2.15.js</span>
+              <button class="copy-btn" onclick="copyText(this,'https://gh-proxy.com/https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261003/星海音乐源V3.2.15.js')">复制</button>
+            </div>
+            <div class="item">
+              <span class="it-name">长青SVIP音源(二改修复版) v1.2.0.js</span>
+              <button class="copy-btn" onclick="copyText(this,'https://gh-proxy.com/https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261003/长青SVIP音源(二改修复版) v1.2.0.js')">复制</button>
+            </div>
+            <div class="item">
+              <span class="it-name">念心音源 v1.0.2.js</span>
+              <button class="copy-btn" onclick="copyText(this,'https://gh-proxy.com/https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261003/念心音源 v1.0.2.js')">复制</button>
+            </div>
+            <div class="item">
+              <span class="it-name">HYWmusic_公益版_v1.0.3.js</span>
+              <button class="copy-btn" onclick="copyText(this,'https://gh-proxy.com/https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261003/HYWmusic_公益版_v1.0.3.js')">复制</button>
+            </div>
+            <div class="item">
+              <span class="it-name">全豆要-聚合音源-V4.1（酷狗挂了）.js</span>
+              <button class="copy-btn" onclick="copyText(this,'https://gh-proxy.com/https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261003/全豆要-聚合音源-V4.1（酷狗挂了）.js')">复制</button>
+            </div>
+            <div class="item">
+              <span class="it-name">稳定版音源 v1.0.3.js</span>
+              <button class="copy-btn" onclick="copyText(this,'https://gh-proxy.com/https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261003/稳定版音源 v1.0.3.js')">复制</button>
+            </div>
+            <div class="item">
+              <span class="it-name">裤佬SVIP音源(二改整合版) v3.0.0.js</span>
+              <button class="copy-btn" onclick="copyText(this,'https://gh-proxy.com/https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261003/裤佬SVIP音源(二改整合版) v3.0.0.js')">复制</button>
+            </div>
+            <div class="item">
+              <span class="it-name">stellarwave-v3.2.0.js</span>
+              <button class="copy-btn" onclick="copyText(this,'https://gh-proxy.com/https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261003/stellarwave-v3.2.0.js')">复制</button>
+            </div>
+            <div class="item">
+              <span class="it-name">统一音乐源.js</span>
+              <button class="copy-btn" onclick="copyText(this,'https://gh-proxy.com/https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261003/统一音乐源.js')">复制</button>
+            </div>
+            <div class="item">
+              <span class="it-name">HelloWorld音源(中秋快乐).js</span>
+              <button class="copy-btn" onclick="copyText(this,'https://gh-proxy.com/https://raw.githubusercontent.com/sowahsun/lxmusic-/main/V261003/HelloWorld音源(中秋快乐).js')">复制</button>
+            </div>
+
+  </div>
+</div>
+
+<!-- 影视 -->
+<div class="panel" id="p1">
+  <div class="sec">
+    <div class="sec-t">📺 TVBox 影视接口</div>
+    <div class="sec-d">公开接口 · TVBox/影视仓「设置 → 配置地址」粘贴 · 时效性短，失效换下一个</div>
+    <div class="grid">
+      <a class="card" href="http://home.jundie.top:81/top98.json" target="_blank"><div class="n">💪 俊佬 top98</div><div class="m">http://home.jundie.top:81/top98.json<br>聚合多源 · 实测可用 · 含直播</div></a>
+      <a class="card" href="http://%E8%82%A5%E7%8C%AB.live/" target="_blank"><div class="n">🐱 肥猫</div><div class="m">http://肥猫.live/<br>经典老牌接口</div></a>
+      <a class="card" href="http://www.%E9%A5%AD%E5%A4%AA%E7%A1%AC.com/tv/" target="_blank"><div class="n">🍚 饭太硬</div><div class="m">http://www.饭太硬.com/tv/<br>经典老牌接口</div></a>
+      <a class="card" href="http://%E5%B0%8F%E7%99%BD.love" target="_blank"><div class="n">🐰 小白.love</div><div class="m">http://小白.love<br>多仓聚合</div></a>
+      <a class="card" href="http://tv.nxog.top/m/" target="_blank"><div class="n">🎯 欧歌多仓</div><div class="m">http://tv.nxog.top/m/<br>多仓聚合</div></a>
+      <a class="card" href="http://yuan.haitangw.net/tv/" target="_blank"><div class="n">🌸 海棠</div><div class="m">http://yuan.haitangw.net/tv/<br>公开接口</div></a>
+    </div>
+  </div>
+</div>
+
+<!-- 听书 -->
+<div class="panel" id="p2">
+  <div class="sec">
+    <div class="sec-t">🎧 听书资源</div>
+    <div class="sec-d">公开听书站点</div>
+    <div class="grid">
+      <a class="card" href="https://www.lrts.me" target="_blank"><div class="n">📚 懒人听书</div><div class="m">https://www.lrts.me<br>有声小说/评书/广播剧</div></a>
+      <a class="card" href="https://www.qingting.fm" target="_blank"><div class="n">📻 蜻蜓FM</div><div class="m">https://www.qingting.fm<br>电台/有声书/知识</div></a>
+      <a class="card" href="https://www.ximalaya.com" target="_blank"><div class="n">🎙️ 喜马拉雅</div><div class="m">https://www.ximalaya.com<br>全网最大听书平台</div></a>
+      <a class="card" href="https://ting55.com" target="_blank"><div class="n">🔊 听书网</div><div class="m">https://ting55.com<br>在线听书</div></a>
+    </div>
+  </div>
+</div>
+
+<!-- 直播 -->
+<div class="panel" id="p3">
+  <div class="sec">
+    <div class="sec-t">📡 电视直播</div>
+    <div class="sec-d">公开直播源/接口（含在 TVBox 配置内）</div>
+    <div class="grid">
+      <a class="card" href="http://home.jundie.top:81/top98.json" target="_blank"><div class="n">📺 俊佬（含直播）</div><div class="m">top98.json 内含直播频道</div></a>
+      <a class="card" href="https://youdu.fan/DC.txt" target="_blank"><div class="n">🟣 毒盒多仓</div><div class="m">https://youdu.fan/DC.txt<br>多仓 TXT</div></a>
+    </div>
+  </div>
+</div>
+
+<div class="ft">公开资源导航 · 2026-10-03</div>
+
+<script>
+function sw(i){
+  document.querySelectorAll('.tab').forEach((t,k)=>t.classList.toggle('active',k===i));
+  document.querySelectorAll('.panel').forEach((p,k)=>p.classList.toggle('active',k===i));
+}
+function copyText(btn,text){
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(()=>flash(btn));}
+  else{const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');flash(btn);}catch(e){}document.body.removeChild(ta);}
+}
+function flash(btn){const o=btn.innerText;btn.innerText='✓ 已复制';btn.style.background='#22c55e';setTimeout(()=>{btn.innerText=o;btn.style.background='';},1500);}
+</script>
+</body>
+</html>
