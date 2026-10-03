@@ -7,9 +7,10 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#0f1115;color:#e8e8e8;min-height:100vh;padding:20px 14px 60px}
-.hd{text-align:center;margin-bottom:18px}
+.hd{text-align:center;margin-bottom:14px}
 .hd h1{font-size:24px;font-weight:700;color:#fff}
 .hd p{color:#888;font-size:13px;margin-top:6px}
+.disclaimer{max-width:860px;margin:0 auto 16px;text-align:center;background:#2a2420;border:1px solid #5c4a38;color:#d8b98a;border-radius:10px;padding:10px 14px;font-size:12px;line-height:1.6}
 .tabs{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
 .tab{padding:8px 18px;border-radius:20px;background:#232836;color:#cbd2e0;border:1px solid #2e3548;cursor:pointer;font-size:14px;font-weight:500;transition:all .15s;user-select:none}
 .tab:hover{background:#2e3548;color:#fff}
@@ -22,23 +23,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 .sec-d{color:#77809a;font-size:12px;margin-bottom:14px}
 .item{display:flex;align-items:center;gap:10px;background:#232836;border-radius:8px;padding:9px 12px;font-size:13px;margin-bottom:8px}
 .it-name{flex:1;color:#dde3ee;word-break:break-all}
-.it-url{color:#6b7280;font-size:11px;flex:1;word-break:break-all;display:none}
 .copy-btn{background:#3b82f6;color:#fff;border:none;border-radius:6px;padding:5px 14px;font-size:12px;cursor:pointer;white-space:nowrap;transition:background .15s;flex-shrink:0}
 .copy-btn:hover{background:#2563eb}
 .visit-btn{background:#22c55e;color:#fff;border:none;border-radius:6px;padding:5px 14px;font-size:12px;cursor:pointer;text-decoration:none;display:inline-block;flex-shrink:0;text-align:center}
 .visit-btn:hover{background:#16a34a}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.card{background:#232836;border-radius:10px;padding:14px 16px;display:block;text-decoration:none;color:inherit;transition:transform .15s,background .15s}
-.card:hover{transform:translateY(-2px);background:#2a3040}
-.card .n{font-weight:600;font-size:14px;color:#fff}
-.card .m{color:#8a93a6;font-size:12px;margin-top:5px;line-height:1.6;word-break:break-all}
-.note{background:#1f2a1f;border:1px solid #3c5c3c;border-radius:10px;padding:12px 14px;color:#9fd09f;font-size:12px;line-height:1.8}
+.note{background:#1f2a1f;border:1px solid #3c5c3c;border-radius:10px;padding:12px 14px;color:#9fd09f;font-size:12px;line-height:1.8;margin-top:12px}
 .ft{text-align:center;color:#555;font-size:12px;margin-top:26px}
-.disclaimer{max-width:860px;margin:0 auto 16px;text-align:center;background:#2a2420;border:1px solid #5c4a38;color:#d8b98a;border-radius:10px;padding:10px 14px;font-size:12px;line-height:1.6}
 </style>
 </head>
 <body>
-<div class="hd"><h1>🗂️ 资源导航</h1><p>全网公开资源 · 分类速查</p></div>
+<div class="hd"><h1>🗂️ 资源导航</h1><p>全网公开资源 · 复制链接直接导入</p></div>
 <div class="disclaimer">⚠️ 本站资源均为网络收集，仅供学习交流，版权归原作者所有，如有侵犯请联系删除</div>
 
 <div class="tabs">
@@ -52,9 +46,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 <div class="panel active" id="p0">
   <div class="sec">
     <div class="sec-t">🎵 洛雪音乐音源</div>
-    <div class="sec-d">官方直通车选源 · 精选源一键复制（洛雪App → 设置 → 自定义源管理 → 在线导入）</div>
+    <div class="sec-d">复制链接 → 洛雪App「设置 → 自定义源管理 → 在线导入」即可用</div>
     <div class="item">
-      <span class="it-name">洛雪音源直通车（选源导入）</span>
+      <span class="it-name">音源直通车（选源导入）</span>
       <a class="visit-btn" href="https://77f77.48364836.xyz/lx/" target="_blank">打开</a>
       <button class="copy-btn" onclick="copyText(this,'https://77f77.48364836.xyz/lx/')">复制</button>
     </div>
@@ -114,14 +108,30 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 <div class="panel" id="p1">
   <div class="sec">
     <div class="sec-t">📺 TVBox 影视接口</div>
-    <div class="sec-d">公开接口 · TVBox/影视仓「设置 → 配置地址」粘贴 · 时效性短，失效换下一个</div>
-    <div class="grid">
-      <a class="card" href="http://home.jundie.top:81/top98.json" target="_blank"><div class="n">💪 俊佬 top98</div><div class="m">http://home.jundie.top:81/top98.json<br>聚合多源 · 实测可用 · 含直播</div></a>
-      <a class="card" href="http://%E8%82%A5%E7%8C%AB.live/" target="_blank"><div class="n">🐱 肥猫</div><div class="m">http://肥猫.live/<br>经典老牌接口</div></a>
-      <a class="card" href="http://www.%E9%A5%AD%E5%A4%AA%E7%A1%AC.com/tv/" target="_blank"><div class="n">🍚 饭太硬</div><div class="m">http://www.饭太硬.com/tv/<br>经典老牌接口</div></a>
-      <a class="card" href="http://%E5%B0%8F%E7%99%BD.love" target="_blank"><div class="n">🐰 小白.love</div><div class="m">http://小白.love<br>多仓聚合</div></a>
-      <a class="card" href="http://tv.nxog.top/m/" target="_blank"><div class="n">🎯 欧歌多仓</div><div class="m">http://tv.nxog.top/m/<br>多仓聚合</div></a>
-      <a class="card" href="http://yuan.haitangw.net/tv/" target="_blank"><div class="n">🌸 海棠</div><div class="m">http://yuan.haitangw.net/tv/<br>公开接口</div></a>
+    <div class="sec-d">复制链接 → TVBox/影视仓「设置 → 配置地址」粘贴 → 即用（含站源+解析+直播）</div>
+    <div class="item">
+      <span class="it-name">💪 俊佬 top98（24影视站+解析+直播，实测可用）</span>
+      <button class="copy-btn" onclick="copyText(this,'http://home.jundie.top:81/top98.json')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">🐱 肥猫（经典聚合接口）</span>
+      <button class="copy-btn" onclick="copyText(this,'http://%E8%82%A5%E7%8C%AB.net/')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">🍚 饭太硬（经典接口）</span>
+      <button class="copy-btn" onclick="copyText(this,'http://www.%E9%A5%AD%E5%A4%AA%E7%A1%AC.com/tv/')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">🐰 小白.love（多仓聚合）</span>
+      <button class="copy-btn" onclick="copyText(this,'http://%E5%B0%8F%E7%99%BD.love')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">🎯 欧歌多仓</span>
+      <button class="copy-btn" onclick="copyText(this,'http://tv.nxog.top/m/')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">🌸 海棠接口</span>
+      <button class="copy-btn" onclick="copyText(this,'http://yuan.haitangw.net/tv/')">复制</button>
     </div>
   </div>
 </div>
@@ -130,12 +140,26 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 <div class="panel" id="p2">
   <div class="sec">
     <div class="sec-t">🎧 听书资源</div>
-    <div class="sec-d">公开听书站点</div>
-    <div class="grid">
-      <a class="card" href="https://www.lrts.me" target="_blank"><div class="n">📚 懒人听书</div><div class="m">https://www.lrts.me<br>有声小说/评书/广播剧</div></a>
-      <a class="card" href="https://www.qingting.fm" target="_blank"><div class="n">📻 蜻蜓FM</div><div class="m">https://www.qingting.fm<br>电台/有声书/知识</div></a>
-      <a class="card" href="https://www.ximalaya.com" target="_blank"><div class="n">🎙️ 喜马拉雅</div><div class="m">https://www.ximalaya.com<br>全网最大听书平台</div></a>
-      <a class="card" href="https://ting55.com" target="_blank"><div class="n">🔊 听书网</div><div class="m">https://ting55.com<br>在线听书</div></a>
+    <div class="sec-d">公开听书站点 · 复制链接浏览器打开即可听</div>
+    <div class="item">
+      <span class="it-name">📚 懒人听书（有声小说/评书）</span>
+      <a class="visit-btn" href="https://www.lrts.me" target="_blank">打开</a>
+      <button class="copy-btn" onclick="copyText(this,'https://www.lrts.me')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">📻 蜻蜓FM（电台/有声书）</span>
+      <a class="visit-btn" href="https://www.qingting.fm" target="_blank">打开</a>
+      <button class="copy-btn" onclick="copyText(this,'https://www.qingting.fm')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">🎙️ 喜马拉雅（全网最大听书平台）</span>
+      <a class="visit-btn" href="https://www.ximalaya.com" target="_blank">打开</a>
+      <button class="copy-btn" onclick="copyText(this,'https://www.ximalaya.com')">复制</button>
+    </div>
+    <div class="item">
+      <span class="it-name">🔊 听书网 ting55（在线听书）</span>
+      <a class="visit-btn" href="https://ting55.com" target="_blank">打开</a>
+      <button class="copy-btn" onclick="copyText(this,'https://ting55.com')">复制</button>
     </div>
   </div>
 </div>
@@ -143,12 +167,23 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Micr
 <!-- 直播 -->
 <div class="panel" id="p3">
   <div class="sec">
-    <div class="sec-t">📡 电视直播</div>
-    <div class="sec-d">公开直播源/接口（含在 TVBox 配置内）</div>
-    <div class="grid">
-      <a class="card" href="http://home.jundie.top:81/top98.json" target="_blank"><div class="n">📺 俊佬（含直播）</div><div class="m">top98.json 内含直播频道</div></a>
-      <a class="card" href="https://youdu.fan/DC.txt" target="_blank"><div class="n">🟣 毒盒多仓</div><div class="m">https://youdu.fan/DC.txt<br>多仓 TXT</div></a>
+    <div class="sec-t">📡 电视直播源</div>
+    <div class="sec-d">复制直播源链接 → TVBox/影视仓「直播」导入即用</div>
+    <div class="item">
+      <span class="it-name">📺 俊佬直播源（top98 内含）</span>
+      <button class="copy-btn" onclick="copyText(this,'http://home.jundie.top:81/Cat/tv/live.txt')">复制</button>
     </div>
+    <div class="item">
+      <span class="it-name">🟣 毒盒多仓（含直播）</span>
+      <button class="copy-btn" onclick="copyText(this,'https://youdu.fan/DC.txt')">复制</button>
+    </div>
+  </div>
+  <div class="note">
+    💡 <b>使用说明</b><br>
+    · 音乐：洛雪App → 自定义源管理 → 在线导入 → 粘贴复制的内容<br>
+    · 影视/直播：TVBox/影视仓 → 设置 → 配置地址 → 粘贴<br>
+    · 公开接口时效性短，失效了就换下一个；「俊佬 top98」为实测可用<br>
+    · 如需更新更多资源，可搜索"TVBox 接口 最新" / "洛雪音源 直通车"
   </div>
 </div>
 
